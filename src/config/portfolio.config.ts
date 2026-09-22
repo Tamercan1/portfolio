@@ -123,7 +123,7 @@ export const ABOUT = {
 
 // -- Currently learning ---------------------------------
 export const LEARNING = {
-  subtitle: "Areas I'm actively building skill in right now -- not technologies I've mastered.",
+  subtitle: "Areas I'm actively building skill in right now",
   items: [
     'Backend engineering',
     'PostgreSQL',
