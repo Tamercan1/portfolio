@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import FeaturedProject from './components/FeaturedProject';
 import OtherProjects from './components/OtherProjects';
-import About from './components/About';
+import Stack from './components/Stack';
 import Learning from './components/Learning';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -16,7 +16,7 @@ function App() {
         <Hero />
         <FeaturedProject />
         <OtherProjects />
-        <About />
+        <Stack />
         <Learning />
         <Contact />
       </main>
