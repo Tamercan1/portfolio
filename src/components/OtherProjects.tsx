@@ -127,7 +127,7 @@ function ProjectCard({ project, index }: { project: OtherProject; index: number 
         </div>
 
         <h3 className="card-title">{project.title}</h3>
-        <p className="proj-desc">{project.description}</p>
+        <p className="proj-desc" dangerouslySetInnerHTML={{ __html: project.description }} />
 
         <div className="stack-row">
           {project.stack.map((tech) => (

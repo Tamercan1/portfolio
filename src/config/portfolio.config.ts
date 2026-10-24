@@ -115,10 +115,10 @@ export interface OtherProject {
 
 export const OTHER_PROJECTS: OtherProject[] = [
   {
-    title: 'CSE Reviewer',
+    title: 'Ka-CSE Reviewer',
     eyebrow: 'Civil Service Exam prep',
     description:
-      'A lightweight Civil Service Examination review platform that has helped 1,000+ users prepare through practice quizzes, timed mock exams, and daily vocabulary drills.',
+      'A lightweight Civil Service Examination review platform that has helped <strong>1,000+</strong> users prepare through practice quizzes, timed mock exams, and daily vocabulary drills.',
     stack: ['JavaScript', 'Tailwind CSS', 'LocalStorage'],
     screenshots: {
       desktop: '/screenshots/kacsereviewer-desktop.png',
