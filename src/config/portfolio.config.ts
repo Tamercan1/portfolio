@@ -206,6 +206,11 @@ export const STACK_CATEGORIES: StackCategory[] = [
     description: 'Version control, development workflows, and deploying applications.',
     items: ['Git', 'GitHub', 'Vercel', 'Render', 'Netlify', 'NASA APIs'],
   },
+  {
+    title: 'HardWare & Embedded Systems',
+    description: 'Microcontroller programming, sensor integrations, and hardware prototyping',
+    items: ['Arduino', 'ESP32', 'Sensors & Actuators', 'Embedded C/C++', 'Prototyping'],
+  },
 ];
 
 // -- Currently learning ---------------------------------
