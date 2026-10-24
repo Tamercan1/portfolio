@@ -13,14 +13,39 @@ export const IDENTITY = {
   name: 'Tamercan Wawa',
   fullName: 'Datu Tamer-Can Wawa',
   title: 'Computer Science student',
-  role: 'Building toward Software Engineering & AI.',
+  role: 'Software Engineering & AI.',
   lede: [
     "I'm a Computer Science student working toward software engineering and AI engineering. I learn by building real projects, experimenting with different technologies, and figuring out how things work under the hood — from frontend interfaces and backend systems to APIs, databases, and AI integrations.",
-    "I enjoy turning ideas into practical applications that solve real problems. Whether I'm building an AI-powered space exploration platform, creating tools to help students prepare for exams, or experimenting with new ideas, I focus on understanding the systems behind what I build, not just getting them to work.",
+    "I enjoy building and experimenting with ideas. Whether I'm building an AI-powered application, creating tools to help students prepare for exams, or experimenting with different technologies. I focus on understanding the systems behind what I build, not just getting them to work.",
     "Today, I'm focused on strengthening my foundations in software engineering and AI, building more meaningful projects, and preparing for opportunities where I can learn from experienced engineers, contribute to real products, and keep growing as a developer.",
   ],
   footerTagline: 'built while learning',
   year: '2026',
+} as const;
+
+// -- Availability & Connect Badge -----------------------
+export const AVAILABILITY = {
+  status: 'Open for projects',
+  badgeAction: "LET'S CONNECT",
+  email: 'wawatamercan@gmail.com',
+  timezone: 'PHT (UTC+8)',
+  responseTime: '< 24 hours',
+  modal: {
+    heading: "Let's connect",
+    subheading:
+      "I'm currently available for software engineering projects, AI engineering collaborations, and internships. Let's discuss your ideas or upcoming opportunities.",
+    emailSubject: "Let's Connect — Project / Opportunity",
+    emailBody: `Hi Tamercan,
+
+I saw your portfolio and would like to reach out regarding:
+
+• Topic / Opportunity: 
+• Scope & Timeline: 
+
+Looking forward to connecting!
+
+Best regards,`,
+  },
 } as const;
 
 // -- Nav links (label + anchor) -------------------------
@@ -154,12 +179,12 @@ export const STACK_CATEGORIES: StackCategory[] = [
   {
     title: 'Languages',
     description: "The languages I use to build projects, backend services, and solve problems.",
-    items: ['Python', 'TypeScript', 'JavaScript', 'Java', 'C', 'SQL'],
+    items: ['Python', 'TypeScript', 'JavaScript', 'Java', 'C', 'C++', 'SQL'],
   },
   {
     title: 'Frontend',
     description: 'Building responsive interfaces and interactive web applications.',
-    items: ['React', 'Vite', 'HTML', 'CSS', 'Tailwind CSS'],
+    items: ['React', 'Next JS', 'Vite', 'HTML', 'CSS', 'Tailwind CSS'],
   },
   {
     title: 'Backend & APIs',

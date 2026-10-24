@@ -1,5 +1,7 @@
 import { IDENTITY } from '../config/portfolio.config';
 import { LINKS } from '../config/links';
+import AvailabilityBadge from './AvailabilityBadge';
+import HeroTerminal from './HeroTerminal';
 
 export default function Hero() {
   const ledeParagraphs = Array.isArray(IDENTITY.lede)
@@ -33,46 +35,53 @@ export default function Hero() {
         />
       </svg>
       <div className="wrap">
-        <div className="hero-content">
-          <p className="hero-eyebrow mono">
-            <svg
-              width="13"
-              height="13"
-              viewBox="0 0 13 13"
-              fill="none"
-              style={{ verticalAlign: '-2px', marginRight: '7px' }}
-            >
-              <circle
-                cx="6.5"
-                cy="6.5"
-                r="5"
-                stroke="currentColor"
-                strokeWidth="1.1"
-                strokeDasharray="2 2"
-              />
-              <circle cx="6.5" cy="6.5" r="1.3" fill="currentColor" />
-            </svg>
-            {IDENTITY.title}
-          </p>
-          <h1>{IDENTITY.name}</h1>
-          <h2 className="role">{IDENTITY.role}</h2>
-          <div className="hero-lede-group">
-            {ledeParagraphs.map((para, i) => (
-              <p key={i} className="lede">
-                {para}
-              </p>
-            ))}
+        <div className="hero-grid">
+          <div className="hero-content">
+            <p className="hero-eyebrow mono">
+              <svg
+                width="13"
+                height="13"
+                viewBox="0 0 13 13"
+                fill="none"
+                style={{ verticalAlign: '-2px', marginRight: '7px' }}
+              >
+                <circle
+                  cx="6.5"
+                  cy="6.5"
+                  r="5"
+                  stroke="currentColor"
+                  strokeWidth="1.1"
+                  strokeDasharray="2 2"
+                />
+                <circle cx="6.5" cy="6.5" r="1.3" fill="currentColor" />
+              </svg>
+              {IDENTITY.title}
+            </p>
+            <h1>{IDENTITY.name}</h1>
+            <h2 className="role">{IDENTITY.role}</h2>
+            <div className="hero-lede-group">
+              {ledeParagraphs.map((para, i) => (
+                <p key={i} className="lede">
+                  {para}
+                </p>
+              ))}
+            </div>
+            <div className="btn-row">
+              <a href="#projects" className="btn btn-primary">
+                View Projects
+              </a>
+              <a href={LINKS.github} target="_blank" rel="noreferrer" className="btn btn-ghost">
+                GitHub
+              </a>
+              <a href={LINKS.linkedin} target="_blank" rel="noreferrer" className="btn btn-ghost">
+                LinkedIn
+              </a>
+            </div>
+            <AvailabilityBadge />
           </div>
-          <div className="btn-row">
-            <a href="#projects" className="btn btn-primary">
-              View Projects
-            </a>
-            <a href={LINKS.github} target="_blank" rel="noreferrer" className="btn btn-ghost">
-              GitHub
-            </a>
-            <a href={LINKS.linkedin} target="_blank" rel="noreferrer" className="btn btn-ghost">
-              LinkedIn
-            </a>
+
+          <div className="hero-aside">
+            <HeroTerminal />
           </div>
         </div>
       </div>
