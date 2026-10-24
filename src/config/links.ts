@@ -18,8 +18,13 @@ export const LINKS = {
 
   /** Project-specific links -- keyed by project slug */
   projects: {
+    spaceScoutV2: {
+      app: 'https://spacescout-app.vercel.app',
+      landing: 'https://spacescout.vercel.app',
+      github: 'https://github.com/Tamercan1/SpaceScout-v2',
+    },
     spaceScout: {
-      live: 'https://github.com/Tamercan1/spacescout-ai-space-planner/blob/main/images/README.md',
+      demo: 'https://github.com/Tamercan1/spacescout-ai-space-planner/blob/main/images/README.md',
       github: 'https://github.com/Tamercan1/spacescout-ai-space-planner',
     },
     maiFriend: {

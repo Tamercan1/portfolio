@@ -29,31 +29,48 @@ export const NAV_ITEMS = [
 
 // -- Featured project -----------------------------------
 export const FEATURED_PROJECT = {
-  eyebrow: 'CS50W final project',
-  title: 'SpaceScout',
+  eyebrow: 'Full-stack AI space exploration',
+  title: 'SpaceScout v2 — AI-Powered Space Exploration',
   description:
-    'An AI-powered astronomy exploration tool that turns natural-language questions into structured discoveries using NASA data.',
-  stack: ['React', 'TypeScript', 'Django', 'DRF', 'JWT auth', 'NASA APIs', 'LLM / OpenRouter'],
-  flow: ['question', 'AI planner', 'NASA APIs', 'structured discoveries', 'React interface'],
+    'An AI-powered space exploration platform that turns natural-language questions into structured NASA data discoveries. Explore persistent space plans, browse discoveries, and continue exploring through conversational interactions.',
+  stack: [
+    'React',
+    'TypeScript',
+    'Django',
+    'DRF',
+    'OpenRouter',
+    'NASA APIs',
+    'BYOK Support',
+    'Persistent Plans',
+  ],
+  flow: [
+    'Natural-language query',
+    'OpenRouter AI planner',
+    'NASA API tool calls',
+    'Structured discoveries & persistent plans',
+    'Conversational deep-dive',
+  ],
   challenge:
-    "Getting an LLM to act as a reliable agent -- calling NASA API tools, then returning consistent structured JSON the frontend can render as discovery cards.",
-  mockupUrl: 'spacescout.app',
-  mockupQuery: '"What\'s the most interesting near-Earth object this week?"',
+    'Architecting reliable LLM tool-calling workflows across multiple NASA APIs, enforcing strict structured JSON schemas for discoveries, and maintaining persistent space plans with interactive conversational context.',
+  mockupUrl: 'spacescout-app.vercel.app',
+  mockupQuery: '"What are the most notable near-Earth objects and rover findings this week?"',
   mockupCards: [
     {
-      title: '2024 XR3 -- Close Approach',
-      body: 'A near-Earth asteroid passing within 0.02 AU, notable for its unusually fast rotation period.',
-      source: 'NASA NEO API',
+      title: '2024 XR3 — Close Approach Analysis',
+      body: 'A near-Earth asteroid passing within 0.02 AU, analyzed with orbital telemetry and radar velocity data.',
+      source: 'NASA NeoWs API • Space Plan #104',
     },
     {
-      title: 'Perseverance -- Sol 1042',
-      body: 'Latest rover imagery from Jezero Crater, flagged for visible sedimentary layering.',
-      source: 'NASA Mars Rover API',
+      title: 'Perseverance Rover — Sol 1042 Discoveries',
+      body: 'High-resolution Mastcam-Z imagery from Jezero Crater confirming deltaic sediment layering and rock core sampling targets.',
+      source: 'NASA Mars Rover API • Multi-turn Chat Ready',
     },
   ],
   links: {
-    live: LINKS.projects.spaceScout.live,
-    github: LINKS.projects.spaceScout.github,
+    app: LINKS.projects.spaceScoutV2.app,
+    landing: LINKS.projects.spaceScoutV2.landing,
+    github: LINKS.projects.spaceScoutV2.github,
+    live: LINKS.projects.spaceScoutV2.app,
   },
 } as const;
 
@@ -74,6 +91,17 @@ export interface OtherProject {
 }
 
 export const OTHER_PROJECTS: OtherProject[] = [
+  {
+    title: 'SpaceScout (v1)',
+    eyebrow: 'Harvard CS50W final project',
+    description:
+      "The original Harvard CS50W final project that established the foundation for SpaceScout's AI-powered NASA data exploration experience.",
+    stack: ['React', 'TypeScript', 'Django', 'DRF', 'JWT auth', 'NASA APIs', 'LLM'],
+    links: {
+      demo: LINKS.projects.spaceScout.demo,
+      github: LINKS.projects.spaceScout.github,
+    },
+  },
   {
     title: 'mAI Friend',
     eyebrow: 'CS50P final project',

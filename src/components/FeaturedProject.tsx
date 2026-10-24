@@ -46,12 +46,20 @@ export default function FeaturedProject() {
 
             <div className="btn-row">
               <a
-                href={FEATURED_PROJECT.links.live}
+                href={FEATURED_PROJECT.links.app}
                 target="_blank"
                 rel="noreferrer"
                 className="btn btn-primary"
               >
-                View Project
+                Launch App
+              </a>
+              <a
+                href={FEATURED_PROJECT.links.landing}
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-ghost"
+              >
+                Landing Page
               </a>
               <a
                 href={FEATURED_PROJECT.links.github}
