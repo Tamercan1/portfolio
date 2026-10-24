@@ -14,17 +14,21 @@ export const IDENTITY = {
   fullName: 'Datu Tamer-Can Wawa',
   title: 'Computer Science student',
   role: 'Building toward Software Engineering & AI.',
-  lede: "I build applications that connect software, APIs, backend systems, and AI — and I enjoy exploring technology, experimenting with ideas, and building things along the way.",
+  lede: [
+    "I'm a Computer Science student working toward software engineering and AI engineering. I learn by building real projects, experimenting with different technologies, and figuring out how things work under the hood — from frontend interfaces and backend systems to APIs, databases, and AI integrations.",
+    "I enjoy turning ideas into practical applications that solve real problems. Whether I'm building an AI-powered space exploration platform, creating tools to help students prepare for exams, or experimenting with new ideas, I focus on understanding the systems behind what I build, not just getting them to work.",
+    "Today, I'm focused on strengthening my foundations in software engineering and AI, building more meaningful projects, and preparing for opportunities where I can learn from experienced engineers, contribute to real products, and keep growing as a developer.",
+  ],
   footerTagline: 'built while learning',
   year: '2026',
 } as const;
 
 // -- Nav links (label + anchor) -------------------------
 export const NAV_ITEMS = [
-  { label: 'Home',     href: '#home' },
+  { label: 'Home', href: '#home' },
   { label: 'Projects', href: '#projects' },
-  { label: 'About',    href: '#about' },
-  { label: 'Contact',  href: '#contact' },
+  { label: 'Stack', href: '#stack' },
+  { label: 'Contact', href: '#contact' },
 ] as const;
 
 // -- Featured project -----------------------------------
@@ -52,25 +56,15 @@ export const FEATURED_PROJECT = {
   ],
   challenge:
     'Architecting reliable LLM tool-calling workflows across multiple NASA APIs, enforcing strict structured JSON schemas for discoveries, and maintaining persistent space plans with interactive conversational context.',
-  mockupUrl: 'spacescout-app.vercel.app',
-  mockupQuery: '"What are the most notable near-Earth objects and rover findings this week?"',
-  mockupCards: [
-    {
-      title: '2024 XR3 — Close Approach Analysis',
-      body: 'A near-Earth asteroid passing within 0.02 AU, analyzed with orbital telemetry and radar velocity data.',
-      source: 'NASA NeoWs API • Space Plan #104',
-    },
-    {
-      title: 'Perseverance Rover — Sol 1042 Discoveries',
-      body: 'High-resolution Mastcam-Z imagery from Jezero Crater confirming deltaic sediment layering and rock core sampling targets.',
-      source: 'NASA Mars Rover API • Multi-turn Chat Ready',
-    },
-  ],
   links: {
     app: LINKS.projects.spaceScoutV2.app,
     landing: LINKS.projects.spaceScoutV2.landing,
     github: LINKS.projects.spaceScoutV2.github,
     live: LINKS.projects.spaceScoutV2.app,
+  },
+  screenshots: {
+    desktop: '/screenshots/spacescout-v2-desktop.png',
+    mobile: '/screenshots/spacescout-v2-mobile.jpg',
   },
 } as const;
 
@@ -84,6 +78,10 @@ export interface OtherProject {
   stack: string[];
   status?: string;
   statusVariant?: ProjectStatus;
+  screenshots?: {
+    desktop?: string;
+    mobile?: string;
+  };
   links?: {
     demo?: string;
     github?: string;
@@ -92,11 +90,29 @@ export interface OtherProject {
 
 export const OTHER_PROJECTS: OtherProject[] = [
   {
+    title: 'CSE Reviewer',
+    eyebrow: 'Civil Service Exam prep',
+    description:
+      'A lightweight Civil Service Examination review platform that has helped 1,000+ users prepare through practice quizzes, timed mock exams, and daily vocabulary drills.',
+    stack: ['JavaScript', 'Tailwind CSS', 'LocalStorage'],
+    screenshots: {
+      desktop: '/screenshots/kacsereviewer-desktop.png',
+      mobile: '/screenshots/kacsereviewer-mobile.jpg',
+    },
+    links: {
+      demo: LINKS.projects.cseReviewer.demo,
+      github: LINKS.projects.cseReviewer.github,
+    },
+  },
+  {
     title: 'SpaceScout (v1)',
     eyebrow: 'Harvard CS50W final project',
     description:
       "The original Harvard CS50W final project that established the foundation for SpaceScout's AI-powered NASA data exploration experience.",
     stack: ['React', 'TypeScript', 'Django', 'DRF', 'JWT auth', 'NASA APIs', 'LLM'],
+    screenshots: {
+      desktop: '/screenshots/spacescout-v1-desktop.png',
+    },
     links: {
       demo: LINKS.projects.spaceScout.demo,
       github: LINKS.projects.spaceScout.github,
@@ -108,20 +124,12 @@ export const OTHER_PROJECTS: OtherProject[] = [
     description:
       'An adaptive AI companion that uses persistent memory, personas, and conversation context to create more personalized interactions.',
     stack: ['Python', 'Google GenAI SDK', 'Prompt engineering', 'JSON memory'],
+    screenshots: {
+      desktop: '/screenshots/maifriend-desktop.png',
+    },
     links: {
       demo: LINKS.projects.maiFriend.demo,
       github: LINKS.projects.maiFriend.github,
-    },
-  },
-  {
-    title: 'CSE Reviewer',
-    eyebrow: 'Mobile-first exam prep app',
-    description:
-      'A lightweight exam preparation web application designed around practice quizzes, progress tracking, and daily study.',
-    stack: ['JavaScript', 'Tailwind CSS', 'LocalStorage'],
-    links: {
-      demo: LINKS.projects.cseReviewer.demo,
-      github: LINKS.projects.cseReviewer.github,
     },
   },
   {
@@ -135,19 +143,45 @@ export const OTHER_PROJECTS: OtherProject[] = [
   },
 ];
 
-// -- About section --------------------------------------
-export const ABOUT = {
-  paragraphs: [
-    "I'm a <strong>Computer Science student</strong> interested in software engineering and AI application development. I like building things and learning by actually implementing them -- from frontend interfaces to backend APIs, databases, and AI-powered features.",
-    "I’m interested in the systems behind the interface — how APIs, databases, backend services, and AI components come together to make an application work.",
-  ],
-  focus: [
-    'Backend engineering',
-    'Databases',
-    'Software architecture',
-    'AI application development',
-  ],
-} as const;
+// -- Stack section --------------------------------------
+export interface StackCategory {
+  title: string;
+  description: string;
+  items: string[];
+}
+
+export const STACK_CATEGORIES: StackCategory[] = [
+  {
+    title: 'Languages',
+    description: "The languages I use to build projects, backend services, and solve problems.",
+    items: ['Python', 'TypeScript', 'JavaScript', 'Java', 'C', 'SQL'],
+  },
+  {
+    title: 'Frontend',
+    description: 'Building responsive interfaces and interactive web applications.',
+    items: ['React', 'Vite', 'HTML', 'CSS', 'Tailwind CSS'],
+  },
+  {
+    title: 'Backend & APIs',
+    description: 'Server-side logic, REST APIs, authentication, and application architecture.',
+    items: ['Django', 'Django REST Framework', 'REST APIs', 'JWT Authentication'],
+  },
+  {
+    title: 'AI Engineering',
+    description: 'Integrating language models and external data into useful applications.',
+    items: ['OpenRouter', 'Google GenAI SDK', 'LLM Integration', 'Prompt Engineering', 'Tool Calling'],
+  },
+  {
+    title: 'Databases & Data',
+    description: 'Storing, querying, and managing application data.',
+    items: ['PostgreSQL', 'SQLite', 'LocalStorage'],
+  },
+  {
+    title: 'Tools & Deployment',
+    description: 'Version control, development workflows, and deploying applications.',
+    items: ['Git', 'GitHub', 'Vercel', 'Render', 'Netlify', 'NASA APIs'],
+  },
+];
 
 // -- Currently learning ---------------------------------
 export const LEARNING = {
@@ -170,8 +204,8 @@ export const CONTACT = {
   heading: "Studying, building, and looking for the next thing to learn.",
   subtitle: "Open to software engineering and AI-related internships and conversations. The fastest way to reach me is GitHub or email.",
   links: [
-    { label: 'GitHub',   href: LINKS.github,              variant: 'primary' as const },
-    { label: 'LinkedIn', href: LINKS.linkedin,            variant: 'ghost'   as const },
-    { label: 'Email',    href: `mailto:${LINKS.email}`, variant: 'ghost'   as const },
+    { label: 'GitHub', href: LINKS.github, variant: 'primary' as const },
+    { label: 'LinkedIn', href: LINKS.linkedin, variant: 'ghost' as const },
+    { label: 'Email', href: `mailto:${LINKS.email}`, variant: 'ghost' as const },
   ],
 } as const;
