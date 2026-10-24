@@ -2,6 +2,10 @@ import { IDENTITY } from '../config/portfolio.config';
 import { LINKS } from '../config/links';
 
 export default function Hero() {
+  const ledeParagraphs = Array.isArray(IDENTITY.lede)
+    ? IDENTITY.lede
+    : [IDENTITY.lede];
+
   return (
     <section className="hero" id="home">
       <svg className="hero-deco" viewBox="0 0 520 420" fill="none">
@@ -52,7 +56,13 @@ export default function Hero() {
           </p>
           <h1>{IDENTITY.name}</h1>
           <h2 className="role">{IDENTITY.role}</h2>
-          <p className="lede">{IDENTITY.lede}</p>
+          <div className="hero-lede-group">
+            {ledeParagraphs.map((para, i) => (
+              <p key={i} className="lede">
+                {para}
+              </p>
+            ))}
+          </div>
           <div className="btn-row">
             <a href="#projects" className="btn btn-primary">
               View Projects
