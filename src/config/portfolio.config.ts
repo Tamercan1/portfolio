@@ -118,8 +118,8 @@ export const OTHER_PROJECTS: OtherProject[] = [
     title: 'Ka-CSE Reviewer',
     eyebrow: 'Civil Service Exam prep',
     description:
-      'A lightweight Civil Service Examination review platform that has helped <strong>1,000+</strong> users prepare through practice quizzes, timed mock exams, and daily vocabulary drills.',
-    stack: ['JavaScript', 'Tailwind CSS', 'LocalStorage'],
+      'Started as my personal review project that helped me <strong>pass</strong> the Civil Service Exam. Today, it has helped <strong>5,000+</strong> users prepare through timed mock exams, quizzes, and vocabulary drills.',
+    stack: ['Typescript', 'Vite', 'Tailwind CSS', 'LocalStorage'],
     screenshots: {
       desktop: '/screenshots/kacsereviewer-desktop.png',
       mobile: '/screenshots/kacsereviewer-mobile.jpg',
@@ -133,7 +133,7 @@ export const OTHER_PROJECTS: OtherProject[] = [
     title: 'SpaceScout (v1)',
     eyebrow: 'Harvard CS50W final project',
     description:
-      "The original Harvard CS50W final project that established the foundation for SpaceScout's AI-powered NASA data exploration experience.",
+      "The original <strong>Harvard CS50W</strong> final project that established the foundation for SpaceScout's AI-powered NASA data exploration experience.",
     stack: ['React', 'TypeScript', 'Django', 'DRF', 'JWT auth', 'NASA APIs', 'LLM'],
     screenshots: {
       desktop: '/screenshots/spacescout-v1-desktop.png',
@@ -194,7 +194,7 @@ export const STACK_CATEGORIES: StackCategory[] = [
   {
     title: 'AI Engineering',
     description: 'Integrating language models and external data into useful applications.',
-    items: ['OpenRouter', 'Google GenAI SDK', 'LLM Integration', 'Prompt Engineering', 'Tool Calling'],
+    items: ['OpenRouter', 'Google GenAI SDK', 'Openai SDK', 'LLM Integration', 'Prompt Engineering', 'Tool Calling'],
   },
   {
     title: 'Databases & Data',
