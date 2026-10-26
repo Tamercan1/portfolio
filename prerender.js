@@ -27,7 +27,7 @@ async function prerender() {
     // 5. Overwrite dist/index.html with the pre-rendered version
     fs.writeFileSync(templatePath, finalHtml);
 
-    console.log('Static pre-renderin complete!');
+    console.log('Static pre-rendering complete!');
 }
 
 prerender().catch(console.error);
