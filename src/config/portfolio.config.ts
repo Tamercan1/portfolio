@@ -16,8 +16,8 @@ export const IDENTITY = {
   role: 'Software Engineering & AI.',
   lede: [
     "I'm a Computer Science student working toward software engineering and AI engineering. I learn by building real projects, experimenting with different technologies, and figuring out how things work under the hood — from frontend interfaces and backend systems to APIs, databases, and AI integrations.",
-    "I enjoy building and experimenting with ideas. Whether I'm building an AI-powered application, creating tools to help students prepare for exams, or experimenting with different technologies. I focus on understanding the systems behind what I build, not just getting them to work.",
-    "Today, I'm focused on strengthening my foundations in software engineering and AI, building more meaningful projects, and preparing for opportunities where I can learn from experienced engineers, contribute to real products, and keep growing as a developer.",
+    "I enjoy building and experimenting with ideas. Whether I'm building an AI-powered application, creating tools to help students prepare for exams, or just experimenting with technologies.",
+    "Today, I'm focused on strengthening my foundations in software and AI Engineering, building more meaningful projects, and preparing for opportunities where I can learn from experienced engineers, contribute to solving real-world problems, and keep growing as a developer.",
   ],
   footerTagline: 'built while learning',
   year: '2026',
