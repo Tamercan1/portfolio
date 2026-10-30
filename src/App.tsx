@@ -8,10 +8,11 @@ import Learning from './components/Learning';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { Analytics } from '@vercel/analytics/react';
+import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
   return (
-    <>
+    <ThemeProvider>
       <Navbar />
       <main>
         <Hero />
@@ -23,7 +24,7 @@ function App() {
       </main>
       <Footer />
       <Analytics />
-    </>
+    </ThemeProvider>
   );
 }
 

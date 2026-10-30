@@ -13,6 +13,19 @@
     <meta name="keywords" content="Tamercan Wawa, Datu Tamer-Can Wawa, Software Engineer, AI Engineer, Computer Science, SpaceScout, Portfolio, React, TypeScript, Python, Django, LLM, NASA API" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#0B0D12" />
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('theme');
+          var theme = saved === 'light' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', theme);
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) {
+            meta.setAttribute('content', theme === 'light' ? '#F8FAFC' : '#0B0D12');
+          }
+        } catch (e) {}
+      })();
+    </script>
     <meta name="google-site-verification" content="e97shw_2zYOeqmx3AuRkOxSxGTfovK6ondM4mx3rmnM" />
     <link rel="canonical" href="https://tamercan.vercel.app/" />
 
